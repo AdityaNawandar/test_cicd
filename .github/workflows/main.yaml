@@ -31,7 +31,7 @@ jobs:
         run: flutter build apk --split-per-abi
         
       - name: Push to Releases
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
           tag: v1.0.${{ github.run_number }}
